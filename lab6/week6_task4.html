@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - Task 1</title>
+</head>
+
+<style>
+    
+    input {
+        width: 200px;
+        height: 35px;
+        outline: none;
+        border-radius: 4px;
+        margin-top: 20px;
+    }
+
+    button {
+        background-color: white;
+        border-radius: 4px;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div class="conversion">
+        <div class="conversion__group">
+            <label for="fahrenheit">Enter Fahrenheit</label>
+            <input type="text" name="fahrenheit" id="fahrenheit" >
+            <button onclick="convertToC()">Convert</button>
+        </div>
+        <div class="conversion__group">
+            <label for="celsius">Enter Celsius</label>
+            <input type="text" name="celsius" id="celsius" >
+            <button onclick="convertToF()">Convert</button>
+        </div>
+        <div class="conversion__group">
+            <p id="output__celsius"></p>
+            <p id="output__fahrenheit"></p>
+        </div>
+
+    </div>
+
+    <script>
+        const fahrenheitInput = document.getElementById('fahrenheit');
+        const celsiusInput = document.getElementById('celsius');
+        const outputFahrenheit = document.getElementById('output__fahrenheit')
+        const outputCelsius = document.getElementById('output__celsius')
+
+        
+
+        function convertToC() {
+            let value = parseInt(fahrenheitInput.value);
+            let calc = (value - 32) * 5/9;
+            outputCelsius.innerHTML = `The temperature in Celsius is: ${calc.toFixed(2)}`
+            celsiusInput.value = calc.toFixed(2);
+        }
+        function convertToF() {
+            let value = parseInt(celsiusInput.value);
+            let calc = (value * 9/5) + 32;
+            outputFahrenheit.innerHTML = `The temperature in Fahrenheit is: ${calc.toFixed(2)}`
+        }
+
+    </script>
+
+</body>
+
+</html>

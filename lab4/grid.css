@@ -1,0 +1,47 @@
+.content {
+	background-color: #888;
+	/*width: 80%;*/
+	/*relative size or elastic*/
+	width: 980px;
+	/*absolute size or static*/
+	margin: auto;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		"head head head"
+		"bio post friend"
+		"album post friend"
+		"album post friend"
+	;
+	gap: 5px;
+	padding: 10px;
+}
+
+.grid-item {
+	display: flex;
+	padding: 20px;
+	background-color: white;
+}
+
+.grid-item1 {
+	grid-area: head;
+}
+
+.grid-item2 {
+	grid-area: bio;
+}
+
+.grid-item3 {
+	grid-area: album;
+}
+
+.grid-item4 {
+	grid-area: post;
+}
+
+.grid-item5 {
+	grid-area: friend;
+}
+
