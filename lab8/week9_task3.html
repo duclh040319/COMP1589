@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+<canvas id="sCanvas" width="800" height="800"></canvas>
+
+<script>
+    let xPos;
+    let yPos;
+    let i;
+    let j;
+
+    const c = document.getElementById('sCanvas')
+    const ctx = c.getContext('2d')
+
+    function drawSpot(size, xPos, yPos, color) {
+        ctx.beginPath();
+        ctx.arc(xPos, yPos, size, 0, 2 + Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+
+    for (i = 0; i < 9; i++) {
+        xPos = 30;
+        yPos = 30 + (i * 70);
+        for (j = 0; j < 9; j++) {
+            let randomColor = '#' + Math.random().toString(16).substring(2, 8);
+            drawSpot(30, xPos, yPos, randomColor);
+            xPos += 70;
+        }
+    }
+</script>
+</body>
+</html>

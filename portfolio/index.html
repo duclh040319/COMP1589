@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="portfolio">
+        <!-- Navigation -->
+        <nav class="portfolio__nav">
+            <div class="portfolio__nav-heading">Portfolio</div>
+            <div class="portfolio__nav-navigate">
+                <ul class="portfolio__nav-navigate--list">
+                    <li class="portfolio__nav-navigate--item">
+                        <a href="#portfolio__section-home" class="portfolio__nav-navigate--link">Home</a>
+                    </li>
+                    <li class="portfolio__nav-navigate--item">
+                        <a href="#portfolio__section-experience" class="portfolio__nav-navigate--link">Experience</a>
+                    </li>
+                    <li class="portfolio__nav-navigate--item">
+                        <a href="#portfolio__section-project" class="portfolio__nav-navigate--link">Projects</a>
+                    </li>
+
+                    <li class="portfolio__nav-navigate--item">
+                        <a href="#portfolio__section-contact" class="portfolio__nav-navigate--link">Contact</a>
+                    </li>
+                    <li class="portfolio__nav-navigate--item">
+                        <a href="#portfolio__section-social" class="portfolio__nav-navigate--link">Social</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Body -->
+        <main class="portfolio__section">
+            <!-- Home section -->
+            <div id="portfolio__section-home">
+                <div class="home__name">LE HUYNH DUC</div>
+                <h1 class="home__title">Hello, I'm Developer </h1>
+                <p class="home__subtitle">Backend Developer & 2D Game Developer</p>
+                <p class="home_description">Crafting scalable and secure server-side systems with clean, efficient API
+                    design</p>
+                <p class="home_description">Creating engaging 2D gameplay experiences through code, art, and smooth
+                    mechanics</p>
+
+                <a href="#portfolio__section-contact" class="home__contact-button">Contact Me</a>
+                <img src="img/anhthe.jpg" alt="" class="home__profile-img">
+            </div>
+            <!-- Experience section -->
+            <div id="portfolio__section-experience">
+                <h2 class="experience__title">Work Experience</h2>
+                <div class="experience__card">
+                    <h4 class="experience__card-title">Backend Developer</h4>
+                    <p class="experience__card-company">T4 teck</p>
+                    <p class="experience__card-description">Develop API with Nodejs and modern cloud technology</p>
+                    <div class="experience__card-date">2024</div>
+                </div>
+                <div class="experience__card">
+                    <h4 class="experience__card-title">Backend Developer</h4>
+                    <p class="experience__card-company">T4 teck</p>
+                    <p class="experience__card-description">Develop API with Nodejs and modern cloud technology</p>
+                    <div class="experience__card-date">2024</div>
+                </div>
+                <div class="experience__card">
+                    <h4 class="experience__card-title">Backend Developer</h4>
+                    <p class="experience__card-company">T4 teck</p>
+                    <p class="experience__card-description">Develop API with Nodejs and modern cloud technology</p>
+                    <div class="experience__card-date">2024</div>
+                </div>
+            </div>
+            <!-- Project section -->
+            <div id="portfolio__section-project">
+                <h2 class="project__title">My Projects</h2>
+                <div class="project__card">
+                    <div class="project__card-item">
+                        <img src="img/chuberong.jpg" alt="" class="project__card-img">
+                        <h4 class="project__card-name">Dragon boy</h4>
+                        <p class="project__card-description">Players will transform into one of the heroes
+                            of 3 planets: Earth, Xayda, Namec</p>
+                        <div class="project__card-tag">
+                            <p class="tag__item">Java</p>
+                            <p class="tag__item">My SQL</p>
+                        </div>
+                    </div>
+                    <div class="project__card-item">
+                        <img src="img/chuberong.jpg" alt="" class="project__card-img">
+                        <h4 class="project__card-name">Dragon boy</h4>
+                        <p class="project__card-description">Players will transform into one of the heroes
+                            of 3 planets: Earth, Xayda, Namec</p>
+                        <div class="project__card-tag">
+                            <p class="tag__item">Java</p>
+                            <p class="tag__item">My SQL</p>
+                        </div>
+                    </div>
+                    <div class="project__card-item">
+                        <img src="img/chuberong.jpg" alt="" class="project__card-img">
+                        <h4 class="project__card-name">Dragon boy</h4>
+                        <p class="project__card-description">Players will transform into one of the heroes
+                            of 3 planets: Earth, Xayda, Namec</p>
+                        <div class="project__card-tag">
+                            <p class="tag__item">Java</p>
+                            <p class="tag__item">My SQL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact section -->
+            <div id="portfolio__section-contact">
+                <h2 class="contact__title">Contact</h2>
+                <p class="contact__description">Have a project idea or collaborate? Send me a message</p>
+                <form action="#" method="post">
+                    <div class="form__group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>
+                    <div class="form__group">
+                        <button class="send__message">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Socials -->
+            <div id="portfolio__section-social">
+                <h2 class="social__title">Social</h2>
+                <p class="social__description">If you want to contact in other method.</p>
+                <div class="social__group">
+                    <div class="social__item">
+                        <a href="https://www.facebook.com/le.huynh.uc.438827" class="social__item-link">
+                            <img src="img/facebook.png" alt="" class="social__item-img">
+                            <p class="social__item-name">Facebook</p>
+                        </a>
+                        <a href="https://www.instagram.com/lehuynhduck4/" class="social__item-link">
+                            <img src="img/instagram.jpg" alt="" class="social__item-img">
+                            <p class="social__item-name">Instagram</p>
+                        </a>
+                        <a href="https://github.com/duclh040319" class="social__item-link">
+                            <img src="img/github.png" alt="" class="social__item-img">
+                            <p class="social__item-name">Github</p>
+                        </a>
+                        <a href="https://x.com/Linh_cute_003" class="social__item-link">
+                            <img src="img/x.png" alt="" class="social__item-img">
+                            <p class="social__item-name">X</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
