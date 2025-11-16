@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <input type="text" id="name">
+    <button onclick="draw()">draw</button>
+    <canvas id="isCanvas" width="550" height="400"></canvas>
+
+    <script>
+        const blue = "#0000F";
+        const green = "#006600";
+        const brown = "#543725";
+        const red = "#FF0000";
+        const yellow = "#FFFF00";
+        const grey = "#666666";
+        const white = "#FFFFFF";
+        const black = "#000000";
+        let colour;
+
+        const c = document.getElementById('isCanvas');
+        const ctx = c.getContext('2d');
+
+        function drawFilledShape(sWidth, sHeight, x, y, colour) {
+            ctx.beginPath();
+            ctx.rect(x,y,sWidth, sHeight);
+            ctx.fillStyle = colour;
+            ctx.fill();
+            ctx.strokeStyle = black;
+            ctx.lineWidth = 5;
+            ctx.stroke();
+        }
+
+        function turnfNameIntoColour(fName) {
+            if(fName.length > 6) {
+                colour = white;
+            }else {
+                colour = grey;
+            }
+            return colour;
+        }
+
+        function turnAgeIntoColour(age) {
+            if(age < 30) {
+                colour = yellow;
+            }else {
+                colour = red;
+            }
+            return colour;
+        }
+
+        function turnEyeColourIntoColour(eyeColour) {
+            if (eyeColour === 'green') {
+                colour = green;
+            }else if (eyeColour === 'blue') {
+                colour = blue;
+            }else if(eyeColour === 'brown') {
+                colour = brown;
+            }
+            return colour;
+        }
+
+        function draw() {
+            let age = 53;
+            let eyeColour = "blue";
+            let fName = document.getElementById('name') ;
+
+            const sColourTopLeft = turnAgeIntoColour(age);
+            const sColourBottomLeft = turnfNameIntoColour(fName);
+            const sColourRight = turnEyeColourIntoColour(eyeColour);
+
+            drawFilledShape(150,150,0,0,sColourTopLeft)
+            drawFilledShape(150,250,0,150,sColourBottomLeft)
+            drawFilledShape(400,400,150,0,sColourRight)
+        }
+
+        // draw();
+    </script>
+</body>
+</html>
